@@ -1,0 +1,22 @@
+@import './layout/header';
+@import './layout/footer';
+@import './font/font';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+	letter-spacing: -1.1px;
+}
+
+ol, ul, li {
+	list-style: none;
+}
+
+a, button {
+	cursor: pointer;
+	text-decoration: none;
+	background: transparent;
+}
