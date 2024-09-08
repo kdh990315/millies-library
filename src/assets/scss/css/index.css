@@ -167,3 +167,66 @@
   border-radius: 50%;
   background-color: #aa8525;
 }
+
+.introduce-section {
+  width: 100%;
+  padding: 5rem 3.5rem 6rem;
+}
+.introduce-section_wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.introduce-section_wrap .contents-header {
+  width: 100%;
+  text-align: center;
+}
+.introduce-section_wrap .contents-header h2 {
+  font-size: 3.2rem;
+  padding-bottom: 2rem;
+}
+.introduce-section_wrap .contents-header p {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: #555;
+}
+.introduce-section_wrap_flow-animation-wrap {
+  margin-top: 4rem;
+}
+.introduce-section_wrap_flow-animation-wrap .img-flow {
+  height: 220px;
+  display: block;
+  background-repeat: repeat-x;
+  background-size: 3000px;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin-bottom: 1rem;
+}
+.introduce-section_wrap_flow-animation-wrap .img-flow1 {
+  background: url(/src/assets/images/slide1.png);
+  animation-name: flow_left;
+}
+.introduce-section_wrap_flow-animation-wrap .img-flow2 {
+  background: url(/src/assets/images/slide2.png);
+  animation-name: flow_right;
+}
+.introduce-section_wrap_flow-animation-wrap .img-flow3 {
+  background: url(/src/assets/images/slide3.png);
+  animation-name: flow_left;
+}
+@keyframes flow_left {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -3000px;
+  }
+}
+@keyframes flow_right {
+  from {
+    background-position: -3000px;
+  }
+  to {
+    background-position: 0px;
+  }
+}

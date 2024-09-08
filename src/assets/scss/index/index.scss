@@ -193,3 +193,64 @@ $main-color: #ffeb60;
 		}
 	}
 }
+
+.introduce-section {
+	@include section;
+
+	&_wrap {
+		width: 1200px;
+		margin: 0 auto;
+
+		@include contents-header;
+
+		&_flow-animation-wrap {
+			margin-top: 4rem;
+
+			.img-flow {
+				height: 220px;
+				display: block;
+				background-repeat: repeat-x;
+				background-size: 3000px;
+				animation-duration: 100s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+				margin-bottom: 1rem;
+			}
+
+			.img-flow1 {
+				background: url(/src/assets/images/slide1.png);
+				animation-name: flow_left;
+			}
+
+			.img-flow2 {
+				background: url(/src/assets/images/slide2.png);
+				animation-name: flow_right;
+			}
+
+			.img-flow3 {
+				background: url(/src/assets/images/slide3.png);
+				animation-name: flow_left;
+			}
+
+			@keyframes flow_left {
+				from {
+					background-position: 0px;
+				}
+
+				to {
+					background-position: -3000px;
+				}
+			}
+
+			@keyframes flow_right {
+				from {
+					background-position: -3000px;
+				}
+
+				to {
+					background-position: 0px;
+				}
+			}
+		}
+	}
+}
