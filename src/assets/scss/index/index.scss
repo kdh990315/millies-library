@@ -580,3 +580,157 @@ $main-color: #ffeb60;
 		}
 	}
 }
+
+.price-section {
+	@include section;
+	background-color: $main-color;
+
+	&_wrap {
+		width: 1200px;
+		margin: 0 auto;
+
+		@include contents-header;
+
+		&_main {
+			max-width: 1024px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-top: 4.5rem;
+
+			&_container {
+				display: flex;
+				width: 66.6%;
+
+				&_info {
+					background: #fff;
+					border-radius: 16px;
+					padding: 32px;
+					width: 50%;
+					margin-right: 1.5rem;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
+
+					strong {
+						font-weight: 700;
+						font-size: 1.3rem;
+						color: #242424;
+					}
+
+					.month {
+						display: flex;
+						align-items: baseline;
+						margin: 16px 0;
+
+						span {
+							font-weight: 300;
+							font-size: 24px;
+							color: #242424;
+							margin-right: 6px;
+						}
+
+						p {
+							font-weight: 900;
+							font-size: 40px;
+							line-height: 100%;
+							color: #242424;
+							margin-right: 2px;
+
+							b {
+								font-weight: 700;
+								font-size: 16px;
+								color: #242424;
+							}
+						}
+					}
+
+					.year {
+						margin-bottom: 1rem;
+
+						&_price {
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+
+							p {
+								font-weight: 300;
+								font-size: 1.1rem;
+								line-height: 22px;
+								color: #6f6f6f;
+								margin: 0 .5rem 0 1.5rem;
+								text-decoration: line-through;
+							}
+
+							img {
+								width: 57px;
+								vertical-align: top;
+							}
+						}
+
+						&_discount {
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+
+							span {
+								font-weight: 300;
+								font-size: 24px;
+								color: #242424;
+								margin-right: 6px;
+							}
+
+							p {
+								font-weight: 900;
+								font-size: 40px;
+								line-height: 100%;
+								color: #242424;
+								margin-right: 2px;
+
+								b {
+									font-weight: 700;
+									font-size: 16px;
+									color: #242424;
+								}
+							}
+						}
+					}
+
+					p {
+						font-size: .9rem;
+						line-height: 20px;
+						color: #6f6f6f;
+						text-align: left;
+					}
+				}
+
+			}
+
+			&_info-container {
+
+				&_container {
+					display: flex;
+					align-items: center;
+					flex-direction: row;
+					padding-bottom: 1rem;
+
+					img {
+						width: 72px;
+						margin-right: 24px;
+					}
+
+					p {
+						font-weight: 700;
+						font-size: 1rem;
+						line-height: 22px;
+						color: #242424;
+					}
+				}
+
+			}
+		}
+	}
+}
