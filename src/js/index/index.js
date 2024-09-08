@@ -1,4 +1,5 @@
 import { fetchBooksList } from '../api/bookApi.js';
+import { slideAnimation } from '../utility/slideAnimation.js'
 
 const bookApi = new fetchBooksList();
 
@@ -111,4 +112,6 @@ function tabMenuHandler(section) {
 }
 
 loadBooks();
+tabMenuHandler('slide-section');
 tabMenuHandler('book-tab-section');
+new slideAnimation('.slide-container', '.left-main', 320);
