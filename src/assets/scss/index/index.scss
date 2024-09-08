@@ -254,3 +254,38 @@ $main-color: #ffeb60;
 		}
 	}
 }
+
+.audiodrama-section {
+	@include section;
+	background-color: #f7f7f7;
+
+	&_wrap {
+		width: 1200px;
+		margin: 0 auto;
+
+		@include contents-header;
+
+		.video-poster {
+			width: 850px;
+			margin: 4rem auto 0;
+			position: relative;
+
+			img {
+				width: 100%;
+			}
+
+			&::before {
+				content: "";
+				background: url(/src/assets/images/video-icon.png);
+				background-size: 4rem;
+				width: 4rem;
+				height: 4rem;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				cursor: pointer;
+			}
+		}
+	}
+}

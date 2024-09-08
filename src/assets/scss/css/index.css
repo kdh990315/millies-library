@@ -230,3 +230,46 @@
     background-position: 0px;
   }
 }
+
+.audiodrama-section {
+  width: 100%;
+  padding: 5rem 3.5rem 6rem;
+  background-color: #f7f7f7;
+}
+.audiodrama-section_wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.audiodrama-section_wrap .contents-header {
+  width: 100%;
+  text-align: center;
+}
+.audiodrama-section_wrap .contents-header h2 {
+  font-size: 3.2rem;
+  padding-bottom: 2rem;
+}
+.audiodrama-section_wrap .contents-header p {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: #555;
+}
+.audiodrama-section_wrap .video-poster {
+  width: 850px;
+  margin: 4rem auto 0;
+  position: relative;
+}
+.audiodrama-section_wrap .video-poster img {
+  width: 100%;
+}
+.audiodrama-section_wrap .video-poster::before {
+  content: "";
+  background: url(/src/assets/images/video-icon.png);
+  background-size: 4rem;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
