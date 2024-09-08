@@ -23,6 +23,47 @@ $main-color: #ffeb60;
 	padding: 5rem 3.5rem 6rem;
 }
 
+@mixin book {
+	.slide-wrap {
+		width: 100%;
+		display: flex;
+
+		.book {
+			width: calc(100% / 7);
+			padding: .7rem;
+
+			.book-thumbnail {
+				width: 100%;
+				padding-bottom: .5rem;
+			}
+		}
+
+		.book-title {
+			font-weight: 500;
+			overflow: hidden;
+			max-height: 3rem;
+			margin-bottom: .2rem;
+		}
+
+		.book-authors {
+			width: 100%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			font-size: .9rem;
+			color: #929292;
+		}
+
+		.book-publisher {
+			font-size: 0.8rem;
+			color: #929292;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+	}
+}
+
 .intro-section {
 	width: 100%;
 	height: 900px;
@@ -285,6 +326,39 @@ $main-color: #ffeb60;
 				left: 50%;
 				transform: translate(-50%, -50%);
 				cursor: pointer;
+			}
+		}
+	}
+}
+
+.book-list-section {
+	@include section;
+
+	&_wrap {
+		width: 1200px;
+		margin: 0 auto;
+
+		@include contents-header;
+
+		.booksList-container {
+
+			.books-list {
+				margin-bottom: 5rem;
+
+				strong {
+					display: block;
+					font-size: 1.5rem;
+					line-height: 28px;
+					color: #242424;
+					margin-bottom: 1rem;
+					padding-left: .7rem;
+				}
+
+				.book-container {
+					width: 100%;
+
+					@include book;
+				}
 			}
 		}
 	}
