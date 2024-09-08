@@ -71,3 +71,99 @@
     display: none;
   }
 }
+
+.platform-section {
+  width: 100%;
+  padding: 5rem 3.5rem 6rem;
+  background-color: #ffeb60;
+}
+.platform-section_wrap {
+  width: 890px;
+  margin: 0 auto;
+}
+.platform-section_wrap .contents-header {
+  width: 100%;
+  text-align: center;
+}
+.platform-section_wrap .contents-header h2 {
+  font-size: 3.2rem;
+  padding-bottom: 2rem;
+}
+.platform-section_wrap .contents-header p {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: #555;
+}
+.platform-section_wrap_card-wrap {
+  width: 100%;
+}
+.platform-section_wrap_card-wrap ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 3rem auto 0;
+}
+.platform-section_wrap_card-wrap ul .card {
+  padding: 32px;
+  border-radius: 20px;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.platform-section_wrap_card-wrap ul .card_card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.platform-section_wrap_card-wrap ul .card_card-header strong {
+  font-size: 1.8rem;
+}
+.platform-section_wrap_card-wrap ul .card_card-header i {
+  width: 2rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.platform-section_wrap_card-wrap ul .card_card-header i.card-icon1 {
+  background-image: url(/src/assets/images/platform-icon1.png);
+}
+.platform-section_wrap_card-wrap ul .card_card-header i.card-icon2 {
+  background-image: url(/src/assets/images/platform-icon2.png);
+}
+.platform-section_wrap_card-wrap ul .card_card-header i.card-icon3 {
+  background-image: url(/src/assets/images/platform-icon3.png);
+}
+.platform-section_wrap_card-wrap ul .card_card-header i.card-icon4 {
+  background-image: url(/src/assets/images/platform-icon4.png);
+}
+.platform-section_wrap_card-wrap ul .card p {
+  font-size: 0.8rem;
+  color: #555;
+}
+.platform-section_wrap_quote-wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 20px 26px 16px;
+  border-radius: 16px;
+  background-color: #ffe04b;
+  margin-top: 3rem;
+}
+.platform-section_wrap_quote-wrap .quote-item {
+  position: relative;
+  padding-left: 15px;
+  color: #aa8525;
+  font-size: 0.8rem;
+}
+.platform-section_wrap_quote-wrap .quote-item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #aa8525;
+}

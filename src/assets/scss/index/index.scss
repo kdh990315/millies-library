@@ -1,3 +1,5 @@
+$main-color: #ffeb60;
+
 @mixin contents-header {
 	.contents-header {
 		width: 100%;
@@ -88,6 +90,105 @@
 
 			@media (max-width: 1200px) {
 				display: none;
+			}
+		}
+	}
+}
+
+.platform-section {
+	@include section;
+	background-color: $main-color;
+
+	&_wrap {
+		width: 890px;
+		margin: 0 auto;
+
+		@include contents-header;
+
+		&_card-wrap {
+			width: 100%;
+
+			ul {
+				width: 100%;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 2rem;
+				margin: 3rem auto 0;
+
+				.card {
+					padding: 32px;
+					border-radius: 20px;
+					border-radius: 1rem;
+					background: #fff;
+					box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .1), 0 8px 20px 0 rgba(0, 0, 0, .1);
+
+					&_card-header {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						margin-bottom: 1.5rem;
+
+						strong {
+							font-size: 1.8rem;
+						}
+
+						i {
+							width: 2rem;
+							background-size: 100%;
+							background-repeat: no-repeat;
+
+							&.card-icon1 {
+								background-image: url(/src/assets/images/platform-icon1.png);
+							}
+
+							&.card-icon2 {
+								background-image: url(/src/assets/images/platform-icon2.png);
+							}
+
+							&.card-icon3 {
+								background-image: url(/src/assets/images/platform-icon3.png);
+							}
+
+							&.card-icon4 {
+								background-image: url(/src/assets/images/platform-icon4.png);
+							}
+						}
+					}
+
+					p {
+						font-size: .8rem;
+						color: #555;
+					}
+				}
+			}
+		}
+
+		&_quote-wrap {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4px;
+			padding: 20px 26px 16px;
+			border-radius: 16px;
+			background-color: #ffe04b;
+			margin-top: 3rem;
+
+			.quote-item {
+				position: relative;
+				padding-left: 15px;
+				color: #aa8525;
+				font-size: .8rem;
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 8px;
+					left: 6px;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background-color: #aa8525;
+				}
 			}
 		}
 	}
