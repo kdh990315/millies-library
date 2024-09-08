@@ -114,22 +114,40 @@
         <div class="img-flow3 img-flow"></div>
       </div>
     </section>
-  
-    <section class="audiodrama-section">
-      <div class="audiodrama-section_wrap">
+
+    <section class="book-list-section">
+      <div class="book-list-section_wrap">
         <div class="contents-header">
-          <h2>나만의 공간을 아름답게<br>채워주는 오브제북</h2>
-          <p>이미지와 사운드로 극대화된<br>책의 감성을 오롯이 느껴보세요.</p>
+          <h2>싹 다 무제한<br>9,900원</h2>
+          <p>10년치 베스트셀러<br>신간 오디오북 장르 소설까지</p>
         </div>
   
-        <div class="audiodrama-section_wrap_main">
-          <div class="video-poster">
-            <img src="/src/assets/images/video-poster.jpg" alt="video-poster">
+        <div class="booksList-container">
+          <!-- 베스트셀러 -->
+          <div class="books-list">
+            <strong>지금 서점 베스트 셀러</strong>
+            <div id="bestseller" class="book-container">
+              <ul class="slide-wrap"></ul>
+            </div>
+          </div>
+          <!-- 코딩 관련 서적 -->
+          <div class="books-list">
+            <strong>코딩 관련 서적</strong>
+            <div id="coding" class="book-container">
+              <ul class="slide-wrap"></ul>
+            </div>
+          </div>
+          <!-- 추리 소설 -->
+          <div class="books-list">
+            <strong>인기있는 추리 소설</strong>
+            <div id="detective-novel" class="book-container">
+              <ul class="slide-wrap"></ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
+  
 
     <section class="footer">
       <footer class="footer_wrap">
@@ -176,5 +194,7 @@
     </section>
 
     <script type="module" src="./js/global/global.js"></script>
+    <script type="module" src="./js/index/index.js"></script>
+
   </body>
 </html>
