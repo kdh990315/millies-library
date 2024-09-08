@@ -363,3 +363,60 @@ $main-color: #ffeb60;
 		}
 	}
 }
+
+.challenge-section {
+	@include section;
+	background-color: #f7f7f7;
+
+	&_wrap {
+		width: 1200px;
+		margin: 0 auto;
+
+		@include contents-header;
+
+		&_contents-container {
+			width: 100%;
+			margin-top: 5rem;
+
+			&_main {
+				width: 100%;
+				height: 600px;
+				background: url(/src/assets/images/challenge-bg.png) no-repeat;
+				background-size: 100% 100%;
+
+				&_text-container {
+					width: 100%;
+					padding-top: 3rem;
+					text-align: center;
+
+					h3 {
+						font-size: 2.5rem;
+					}
+
+					p {
+						font-size: 1.35rem;
+						margin-top: 1rem;
+						color: #333;
+					}
+				}
+			}
+
+			&_card-wrap {
+				width: 100%;
+				margin-top: 3rem;
+
+				.card-container {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+
+					img {
+						width: 30%;
+						border-radius: 1.5rem;
+						box-shadow: 0 8px 20px rgba(0, 0, 0, .1), 0 2px 8px rgba(0, 0, 0, .1);
+					}
+				}
+			}
+		}
+	}
+}
