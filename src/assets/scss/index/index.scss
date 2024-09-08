@@ -420,3 +420,56 @@ $main-color: #ffeb60;
 		}
 	}
 }
+
+.book-tab-section {
+	@include section;
+
+	&_wrap {
+		width: 1200px;
+		margin: 0 auto;
+
+		@include contents-header;
+
+		&_main {
+			margin-top: 5rem;
+
+			.tab-menu-container {
+
+				.btn-wrap {
+					padding-left: .7rem;
+
+					.btn {
+						font-size: 14px;
+						overflow: hidden;
+						padding: 6px 16px;
+						display: inline-block;
+						border: 1px solid #242424;
+						border-radius: 100px;
+						margin-right: 12px;
+						color: #242424;
+						cursor: pointer;
+
+						&.active {
+							color: #fff;
+							background-color: #242424;
+						}
+					}
+				}
+
+				&_book-list-container {
+					width: 100%;
+
+					.book-list {
+						display: none;
+
+						&.active {
+							display: block;
+						}
+
+						@include book;
+					}
+				}
+			}
+		}
+	}
+}
