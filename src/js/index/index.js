@@ -147,6 +147,38 @@ function toggleHandler() {
 	});
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.animation');
+
+  const options = {
+    root: null,
+    rootMargin: '',
+    threshold: 0.3
+  };
+
+  function handleIntersection(entries) {
+    entries.forEach(entry => {
+      const scrollMains = entry.target.querySelectorAll('.scroll-main');
+      const scrollSub = entry.target.querySelector('.scroll-sub');
+
+      if (entry.isIntersecting) {
+        scrollMains.forEach(element => element.classList.add('active'));
+        if (scrollSub) scrollSub.classList.add('active');
+      } else {
+        scrollMains.forEach(element => element.classList.remove('active'));
+        if (scrollSub) scrollSub.classList.remove('active');
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(handleIntersection, options);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
+
 loadBooks();
 tabMenuHandler('slide-section');
 tabMenuHandler('book-tab-section');
