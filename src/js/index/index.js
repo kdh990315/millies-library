@@ -134,8 +134,22 @@ function videoHandler() {
     videoContainer.style.display = 'block';
   });
 }
+
+function toggleHandler() {
+	const toggleContainer = document.querySelector('.toggle-container');
+
+	toggleContainer.addEventListener('click', (ev) => {
+		const target = ev.target.closest('.toggle');
+		
+		if(target) {
+			target.classList.toggle('active');
+		}
+	});
+}
+
 loadBooks();
 tabMenuHandler('slide-section');
 tabMenuHandler('book-tab-section');
 new slideAnimation('.slide-container', '.left-main', 320);
 videoHandler();
+toggleHandler();

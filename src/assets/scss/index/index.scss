@@ -938,17 +938,17 @@ $main-color: #ffeb60;
 
 				.review-container {
 					position: relative;
-					
+
 					.review-poster {
 						position: relative;
 						top: -88px;
 						cursor: pointer;
-	
+
 						img {
 							width: 100%;
 							max-width: 547px;
 						}
-	
+
 						&::after {
 							content: '';
 							background: url(/src/assets/images/btn-video-play.svg) no-repeat;
@@ -960,7 +960,7 @@ $main-color: #ffeb60;
 							left: 50%;
 							transform: translate(-50%, -50%);
 							display: block;
-							
+
 						}
 					}
 
@@ -968,7 +968,7 @@ $main-color: #ffeb60;
 						position: absolute;
 						top: -88px;
 						left: 0;
-						width:  547px;
+						width: 547px;
 						height: 547px;
 						display: none;
 
@@ -995,6 +995,88 @@ $main-color: #ffeb60;
 					}
 				}
 			}
+		}
+	}
+}
+
+.QnA-section {
+	@include section;
+	background-color: $main-color;
+
+	&_wrap {
+		width: 1200px;
+		margin: 0 auto;
+
+		@include contents-header;
+
+		&_main {
+			max-width: 920px;
+			margin: 5rem auto 0;
+
+			.QnA-container {
+				display: flex;
+				flex-direction: column;
+
+				.Q-toggle {
+					width: 100%;
+					max-height: 58px;
+					margin-bottom: 1rem;
+					background: #fff;
+					box-shadow: 10px 10px 40px rgba(0, 0, 0, .1);
+					border-radius: 20px;
+					padding: 2rem;
+					cursor: pointer;
+					position: relative;
+					overflow: hidden;
+					transition: max-height .5s ease;
+
+					&.active {
+						max-height: 500px;
+
+						&::after {
+							background: url(/src/assets/images/up-icon.png);
+							background-repeat: no-repeat;
+							background-size: 100% 100%;
+							width: 2rem;
+							height: 2rem;
+						}
+					}
+
+					&::after {
+						position: absolute;
+						right: 1rem;
+						top: 1rem;
+						content: "";
+						background: url(/src/assets/images/down-icon.png);
+						background-repeat: no-repeat;
+						background-size: 100% 100%;
+						width: 2rem;
+						height: 2rem;
+					}
+
+					.Q {
+						margin-right: 33px;
+						font-weight: 700;
+						font-size: 1.35rem;
+						line-height: 24px;
+						margin-top: -11px;
+						color: #242424;
+					}
+
+					.A-container {
+						width: 100%;
+						margin-top: 1.2rem;
+						padding-top: 1rem;
+						border-top: 1px solid #242424;
+
+						.A {
+							color: #555;
+							font-size: 1.1rem;
+						}
+					}
+				}
+			}
+
 		}
 	}
 }
