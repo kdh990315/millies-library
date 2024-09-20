@@ -160,14 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       const scrollMains = entry.target.querySelectorAll('.scroll-main');
       const scrollSub = entry.target.querySelector('.scroll-sub');
-
-      if (entry.isIntersecting) {
-        scrollMains.forEach(element => element.classList.add('active'));
-        if (scrollSub) scrollSub.classList.add('active');
-      } else {
-        scrollMains.forEach(element => element.classList.remove('active'));
-        if (scrollSub) scrollSub.classList.remove('active');
-      }
+  
+      scrollMains.forEach(el => el.classList.toggle('active', entry.isIntersecting));
+      if (scrollSub) scrollSub.classList.toggle('active', entry.isIntersecting);
     });
   }
 
@@ -182,6 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
 loadBooks();
 tabMenuHandler('slide-section');
 tabMenuHandler('book-tab-section');
-new slideAnimation('.slide-container', '.left-main', 320);
+new slideAnimation('.slide-container', '.left-main', 320, {textHandler: true});
 videoHandler();
 toggleHandler();

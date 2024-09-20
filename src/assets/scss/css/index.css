@@ -962,12 +962,12 @@
   display: none;
   min-height: 95px;
 }
+.slide-section .content .left-container .left-main .left-text.active {
+  display: block;
+}
 .slide-section .content .left-container .left-main .left-text b {
   color: #242424;
   font-size: 22px;
-}
-.slide-section .content .left-container .left-main .active {
-  display: block;
 }
 .slide-section .content .left-container .left-main .slide-btn-container {
   display: flex;

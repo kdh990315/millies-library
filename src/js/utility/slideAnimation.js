@@ -1,9 +1,11 @@
 export class slideAnimation {
-	constructor(slideContainer, slideBtnContainers, slideWidth, slideMargin = 0) {
+	constructor(slideContainer, slideBtnContainers, slideWidth, options = {}) {
 		this.containers = document.querySelectorAll(slideContainer);
 		this.btnContainers = document.querySelectorAll(slideBtnContainers);
 		this.width = slideWidth;
-		this.margin = slideMargin;
+
+		this.margin = options.margin || 0;
+		this.textHandler = options.textHandler || false;
 
 		this.slideInit();
 	}
@@ -29,7 +31,9 @@ export class slideAnimation {
 				const btns = Array.from(btnContainer.querySelectorAll('.slide-btn'));
 				const btnIndex = btns.indexOf(target);
 				
-				this.textContainerClassHandler(btnContainer, btnIndex);
+				if(this.textHandler) {
+					this.textContainerClassHandler(btnContainer, btnIndex);
+				}
 
 				btns.forEach(item => {
 					item.classList.remove('active')

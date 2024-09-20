@@ -900,14 +900,14 @@ $main-color: #ffeb60;
 					display: none;
 					min-height: 95px;
 
+					&.active {
+						display: block;
+					}
+
 					b {
 						color: #242424;
 						font-size: 22px;
 					}
-				}
-
-				.active {
-					display: block;
 				}
 
 				.slide-btn-container {
