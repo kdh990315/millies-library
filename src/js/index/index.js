@@ -38,7 +38,7 @@ async function loadBooks() {
     const tabContainer5 = await bookApi.getBooks('영어', 7);
     displayBooksList(tabContainer5, 'tabContainer-t5');
   } catch (error) {
-    console.error('에러가발생했습니다', error);
+    throw new Error(`에러가 발생하였습니다. 에러 내용: ${error}`);
   }
 }
 
@@ -90,11 +90,9 @@ function tabMenuHandler(section) {
       const tabId = target.dataset.tab;
 
       //모든 탭 버튼의 active를 제거
-      document
-        .querySelectorAll(`.${section} .btn-wrap .btn`)
-        .forEach((item) => {
-          item.classList.remove('active');
-        });
+      document.querySelectorAll(`.${section} .btn-wrap .btn`).forEach((item) => {
+        item.classList.remove('active');
+      });
 
       //모든 탭 컨텐츠의 active 제거
       document.querySelectorAll(`.${section} .tap-contents`).forEach((item) => {
@@ -105,9 +103,7 @@ function tabMenuHandler(section) {
       target.classList.add('active');
 
       //클릭된 버튼과 연결된 컨텐츠 표시
-      document
-        .querySelector(`.${section} #tabContainer-${tabId}`)
-        .classList.add('active');
+      document.querySelector(`.${section} #tabContainer-${tabId}`).classList.add('active');
     }
   });
 }
@@ -121,7 +117,7 @@ function videoHandler() {
     const iframe = document.createElement('iframe');
     iframe.setAttribute(
       'src',
-      'https://www.youtube.com/embed/c-XG8k_w1LM?controls=1&mute=1&rel=0&modestbranding=1&autoplay=1', // mute=1과 autoplay=1 추가
+      'https://www.youtube.com/embed/c-XG8k_w1LM?controls=1&mute=1&rel=0&modestbranding=1&autoplay=1' // mute=1과 autoplay=1 추가
     );
     iframe.setAttribute('title', '내돈내산! 밀리 구독 후기');
     iframe.setAttribute('frameborder', '0');
@@ -136,15 +132,15 @@ function videoHandler() {
 }
 
 function toggleHandler() {
-	const toggleContainer = document.querySelector('.toggle-container');
+  const toggleContainer = document.querySelector('.toggle-container');
 
-	toggleContainer.addEventListener('click', (ev) => {
-		const target = ev.target.closest('.toggle');
-		
-		if(target) {
-			target.classList.toggle('active');
-		}
-	});
+  toggleContainer.addEventListener('click', (ev) => {
+    const target = ev.target.closest('.toggle');
+
+    if (target) {
+      target.classList.toggle('active');
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -153,30 +149,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const options = {
     root: null,
     rootMargin: '',
-    threshold: 0.3
+    threshold: 0.3,
   };
 
   function handleIntersection(entries) {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       const scrollMains = entry.target.querySelectorAll('.scroll-main');
       const scrollSub = entry.target.querySelector('.scroll-sub');
-  
-      scrollMains.forEach(el => el.classList.toggle('active', entry.isIntersecting));
+
+      scrollMains.forEach((el) => el.classList.toggle('active', entry.isIntersecting));
       if (scrollSub) scrollSub.classList.toggle('active', entry.isIntersecting);
     });
   }
 
   const observer = new IntersectionObserver(handleIntersection, options);
 
-  sections.forEach(section => {
+  sections.forEach((section) => {
     observer.observe(section);
   });
 });
 
-
 loadBooks();
 tabMenuHandler('slide-section');
 tabMenuHandler('book-tab-section');
-new slideAnimation('.slide-container', '.left-main', 320, {textHandler: true});
+new slideAnimation('.slide-container', '.left-main', 320, { textHandler: true });
 videoHandler();
 toggleHandler();
