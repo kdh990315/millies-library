@@ -27,6 +27,7 @@ export default [
       'arrow-spacing': ['error', { before: true, after: true }],
       'no-var': 'error',
       'prettier/prettier': 'error',
+      'linebrack-style': ['error', 'unix'],
     },
   },
   prettierConfig, // Prettier와 충돌하는 ESLint 규칙 비활성화

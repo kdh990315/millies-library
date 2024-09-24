@@ -9,6 +9,10 @@
 	font-size: 16px;
 	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	letter-spacing: -1.1px;
+
+	@media (max-width: 1200px) {
+		font-size: 14px;
+	}
 }
 
 ol, ul, li {
